@@ -15,7 +15,7 @@ MPV plugin for automatic skipping anime openings and better manual skipping
 
 3. Restart MPV.
 
-## Made thanks to:
+## Made thanks to
 [Inspiration](https://github.com/po5/chapterskip)
 
 Vibecoded with
