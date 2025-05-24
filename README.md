@@ -1,17 +1,16 @@
 # AniSkip
-MPV plugin for skipping anime openings with shortcut
+MPV plugin for automatic skipping anime openings and better manual skipping
 
-- Skip to the next chapter with `Ctrl + Right Arrow`
+- Skips opening chapters for you.
+- Skip to the next chapter with `Ctrl + Right Arrow`, if detection fails.
 - Automatically seeks forward 90 seconds if no chapters are available
   
-- Skip to the previous chapter with `Ctrl + Left Arrow`
-- Automatically seeks backward 90 seconds if no chapters are available
 
 ## Installation
 1. Place `chapter_or_seek.lua` in your MPV scripts directory:
    - **Linux/macOS**: `~/.config/mpv/scripts/`
    - **Windows**: `%APPDATA%\mpv\scripts\`
 
-2. Unbind `Ctrl + Left/Right Arrow` inside `input.conf`.
+2. Unbind `Ctrl + Right Arrow` inside `input.conf`.
 
 3. Restart MPV.
