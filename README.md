@@ -18,6 +18,7 @@ MPV plugin for automatic skipping anime openings and better manual skipping
 ## Made thanks to
 [Inspiration](https://github.com/po5/chapterskip)
 
+
 Vibecoded with
 
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
