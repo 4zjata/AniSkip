@@ -14,13 +14,17 @@ end
 local function auto_skip()
     local ch = mp.get_property_number("chapter", 0)
     local list = mp.get_property_native("chapter-list")
+    local pos = mp.get_property_number("time-pos", 0)
     if not list or ch >= #list then return end
     local title = list[ch+1].title
     if should_skip(title) then
         local n = ch + 1
         while n < #list and should_skip(list[n+1].title) do n = n + 1 end
         if n < #list then
-            mp.set_property_number("chapter", n)
+            local skip = list[n+1].time - pos
+            if skip <= 120 then
+                mp.set_property_number("chapter", n)
+            end
         else
             mp.command("seek 90")
         end
@@ -36,7 +40,7 @@ local function manual_forward()
     if list and ch < #list-1 then
         local next_start = list[ch+2].time
         local skip = next_start - pos
-        if skip > 0 and skip <= 180 then
+        if skip > 0 and skip <= 120 then
             mp.commandv("seek", skip, "exact")
         else
             mp.command("seek 90")
