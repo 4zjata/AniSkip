@@ -10,7 +10,7 @@ AniSkip is an MPV plugin that automatically skips anime openings based on chapte
   
 
 ## Installation
-1. Place `chapter_or_seek.lua` in your MPV scripts directory:
+1. Place `AniSkip.lua` in your MPV scripts directory:
    - **Linux/macOS**: `~/.config/mpv/scripts/`
    - **Windows**: `%APPDATA%\mpv\scripts\`
 
