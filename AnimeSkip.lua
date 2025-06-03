@@ -1,6 +1,6 @@
 local mp = require 'mp'
 
-local skip_patterns = { "opening", "intro", "op" }
+local skip_patterns = { "opening", "intro", "op"}
 
 local function should_skip(title)
     if not title then return false end
@@ -20,10 +20,12 @@ local function auto_skip()
     if should_skip(title) then
         local n = ch + 1
         while n < #list and should_skip(list[n+1].title) do n = n + 1 end
-        if n < #list then
+        if n < #list and list[n+1] and list[n+1].time then
             local skip = list[n+1].time - pos
-            if skip <= 120 then
+            if skip >= 70 and <= 100 then
                 mp.set_property_number("chapter", n)
+            else
+                mp.command("seek 90")
             end
         else
             mp.command("seek 90")
