@@ -1,9 +1,12 @@
-# AniSkip
-MPV plugin for automatic skipping anime openings and better manual skipping
+# AniSkip - MPV Anime Opening Skipper
 
-- Skips opening chapters for you.
-- Skip to the next chapter with `Ctrl + Right Arrow`, if detection fails.
-- Automatically seeks forward 90 seconds if no chapters are available
+
+AniSkip is an MPV plugin that automatically skips anime openings based on chapter names and allows quick navigation to the next chapter.
+
+## Features
+
+*   **Auto-Skip Openings:** Skips openings using chapter names.
+*   **Next Chapter Hotkey:** `Ctrl + Right Arrow` (default) jumps to the next chapter, if there is no chapter or skip is too big, skips 90 seconds forward.
   
 
 ## Installation
