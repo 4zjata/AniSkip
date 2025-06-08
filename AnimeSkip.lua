@@ -28,7 +28,7 @@ local function auto_skip()
     if ch == 0
        and first and first.time == 0
        and second and second.time
-       and (second.time - first.time) > 120
+       and (second.time - first.time) > 100
     then
         return
     end
