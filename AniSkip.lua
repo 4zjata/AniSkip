@@ -33,7 +33,8 @@ local function auto_skip()
         return
     end
 
-    local title = list[ch + 1].title or ""
+    local chapter_entry = list[ch + 1]
+    local title = chapter_entry and chapter_entry.title or ""
     local t = title:lower()
 
     -- do not skip the intro if chapter is "intro" and next chapter is an "op",
